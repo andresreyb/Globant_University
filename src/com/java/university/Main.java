@@ -1,12 +1,13 @@
 package com.java.university;
 
+import com.java.university.business.University;
 import com.java.university.business.util.Input;
 import com.java.university.persistence.entity.*;
 
 public class Main {
     public static void main(String[] args) {
         int option = 0;
-        //Teachers Initialized
+        //Data Initialized
         University university = new University("Globant University");
         TeacherPartTime teacherPartTime = new TeacherPartTime("Camilo Ortiz", 30_000);
         teacherPartTime.setActiveHours(30);
@@ -18,7 +19,7 @@ public class Main {
         course.setClassroom("A101");
         university.addCourse(course);
 
-        teacherPartTime = new TeacherPartTime("Hector Moreno", 28_000);
+        teacherPartTime = new TeacherPartTime("Hector Villa", 28_000);
         teacherPartTime.setActiveHours(35);
         teacherPartTime.calculateSalary();
         university.addTeacher(teacherPartTime);
@@ -28,7 +29,7 @@ public class Main {
         course.setClassroom("A102");
         university.addCourse(course);
 
-        TeacherFullTime teacherFullTime = new TeacherFullTime("Leonardo Donado", 5_000_000);
+        TeacherFullTime teacherFullTime = new TeacherFullTime("Leonardo Donado", 2_000_000);
         teacherFullTime.setYears(3);
         teacherFullTime.calculateSalary();
         university.addTeacher(teacherFullTime);
@@ -38,7 +39,15 @@ public class Main {
         course.setClassroom("A103");
         university.addCourse(course);
 
-        teacherFullTime = new TeacherFullTime("Fernando Gonzalez", 5_500_000);
+        Student student = new Student("Felipe Sánchez");
+        student.setId("S2");
+        student.setAge(20);
+        university.addStudent(student);
+        student.addCourse(course);
+        university.addStudent(student);
+
+
+        teacherFullTime = new TeacherFullTime("Fernando Gonzalez", 2_500_000);
         teacherFullTime.setYears(5);
         teacherFullTime.calculateSalary();
         university.addTeacher(teacherFullTime);
@@ -50,16 +59,10 @@ public class Main {
 
         //Students Initialized
 
-        Student student = new Student("Carlos Rey");
+        student = new Student("Carlos Rey");
         student.setId("S1");
         student.setAge(20);
         student.addCourse(course);
-        university.addStudent(student);
-
-
-        student = new Student("Felipe Sánchez");
-        student.setId("S2");
-        student.setAge(20);
         university.addStudent(student);
 
         student = new Student("Alejandra Rey");
@@ -83,8 +86,9 @@ public class Main {
         university.addStudent(student);
 
         while (option <= 7) {
-
-            System.out.println("WELCOME TO GLOBANT UNIVERSITY");
+            System.out.println("*********************************");
+            System.out.println("* WELCOME TO GLOBANT UNIVERSITY *");
+            System.out.println("*********************************");
             System.out.println("OPTIONS");
             System.out.println("1. List Teachers");
             System.out.println("2. Print all courses");
@@ -116,7 +120,6 @@ public class Main {
                 case 6:
                     university.displayStudent();
                     break;
-
             }
 
         }

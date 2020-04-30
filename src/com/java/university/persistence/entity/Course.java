@@ -37,6 +37,7 @@ public class Course extends Common {
 
     @Override
     public void displayInfo() {
+        System.out.println("*************************");
         System.out.println("Course Name: " + getName());
         System.out.println("Classroom: " + getClassroom());
     }

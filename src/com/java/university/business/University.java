@@ -1,6 +1,7 @@
-package com.java.university.persistence.entity;
+package com.java.university.business;
 
 import com.java.university.business.util.Input;
+import com.java.university.persistence.entity.*;
 
 import java.util.ArrayList;
 import java.util.List;
