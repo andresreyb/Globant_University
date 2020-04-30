@@ -44,7 +44,7 @@ public abstract class Teacher extends Common {
     public void displayInfo() {
         System.out.println("*************************");
         System.out.println("Teacher Information");
-        System.out.println("Name: "+ getName());
+        System.out.println("Teacher Name: "+ getName());
         System.out.println("Salary: " + getSalary());
 
     }

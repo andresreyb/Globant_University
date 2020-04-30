@@ -21,7 +21,6 @@ public class TeacherFullTime extends Teacher {
         super.displayInfo();
         System.out.println("Type: Full Time" );
         System.out.println("Years: "+ years );
-
     }
 
     public int getYears() {

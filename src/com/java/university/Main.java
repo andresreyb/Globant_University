@@ -61,28 +61,28 @@ public class Main {
 
         student = new Student("Carlos Rey");
         student.setId("S1");
-        student.setAge(20);
+        student.setAge(22);
         student.addCourse(course);
         university.addStudent(student);
 
         student = new Student("Alejandra Rey");
         student.setId("S3");
-        student.setAge(20);
+        student.setAge(18);
         university.addStudent(student);
 
         student = new Student("Mauricio Acosta");
         student.setId("S4");
-        student.setAge(20);
+        student.setAge(24);
         university.addStudent(student);
 
         student = new Student("Julian Baquero");
         student.setId("S5");
-        student.setAge(20);
+        student.setAge(27);
         university.addStudent(student);
 
         student = new Student("Martín Martinez");
         student.setId("S6");
-        student.setAge(20);
+        student.setAge(21);
         university.addStudent(student);
 
         while (option <= 7) {

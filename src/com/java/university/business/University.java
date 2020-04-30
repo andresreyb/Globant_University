@@ -67,7 +67,7 @@ public class University extends Common {
         String id = Input.next();
         Student studentFound = findStudent(id);
         if (studentFound != null){
-            System.out.println("the Student already exists");
+            System.out.println("The Student already exists");
             return;
         }
         System.out.println("Please enter the Student's name");

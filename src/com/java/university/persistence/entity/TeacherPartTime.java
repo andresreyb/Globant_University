@@ -19,8 +19,6 @@ public class TeacherPartTime extends Teacher {
         super.displayInfo();
         System.out.println("Type: Part Time");
         System.out.println("Active hours: " + activeHours);
-
-
     }
 
     public double getActiveHours() {
